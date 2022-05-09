@@ -5,7 +5,7 @@ import './AddItem.css'
 import { toast } from 'react-toastify';
 
 const AddItem = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log(data);
         const url = `https://young-garden-12148.herokuapp.com/items`;
@@ -21,6 +21,7 @@ const AddItem = () => {
             console.log(result);
             if(result.insertedId){
                     toast('New Item Added');
+                    reset()
                 }
         })
         
