@@ -8,8 +8,6 @@ const UpdateItems = () => {
     const {id} = useParams();
     const [user, setUser] = useUpdateItems(id);
     const {quantity} = user;
-    // const [quantity, setQuantity] = useState('');
-    // console.log(quantity);
 
 
     
@@ -22,7 +20,7 @@ const UpdateItems = () => {
         const Quantity = newStock + existQuantity;
         const newQuantity = {...user , quantity: Quantity}
         setUser(newQuantity);
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://young-garden-12148.herokuapp.com/items/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -41,7 +39,7 @@ const UpdateItems = () => {
         const newQuantity = {...user , quantity: quantity}
         setUser(newQuantity);
 
-        const url = `http://localhost:5000/items/${id}`;
+        const url = `https://young-garden-12148.herokuapp.com/items/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -70,7 +68,6 @@ const UpdateItems = () => {
                 <form onSubmit={increaseQuantity}>
                     <div className='input-group'>
                         <input className='form-control' name='newStockValue' type="number" />
-                        {/* <button className='btn btn-info text-white'>Restock</button> */}
                         <input className='btn btn-info text-white'  type="submit" value="Restock" />
                     </div>
                 </form>

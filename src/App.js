@@ -5,6 +5,8 @@ import Inventory from './components/Inventory/Inventory';
 import MangeInventories from './components/MangeInventories/MangeInventories';
 import UpdateItems from './components/UpdateItems/UpdateItems';
 import AddItem from './components/AddItem/AddItem';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
         <Route path='/manage' element={<MangeInventories></MangeInventories>}></Route>
         <Route path='/update/:id' element={<UpdateItems></UpdateItems>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

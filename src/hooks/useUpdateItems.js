@@ -7,7 +7,7 @@ const useUpdateItems = () =>{
 
     const [user, setUser] = useState({})
     useEffect(()=>{
-        const url = `http://localhost:5000/items/${id}`;
+        const url = `https://young-garden-12148.herokuapp.com/items/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setUser(data))

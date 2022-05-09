@@ -2,12 +2,13 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import Header from '../Header/Header';
 import './AddItem.css'
+import { toast } from 'react-toastify';
 
 const AddItem = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        console.log(data);
-        const url = `http://localhost:5000/items`;
+        // console.log(data);
+        const url = `https://young-garden-12148.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -18,6 +19,9 @@ const AddItem = () => {
         .then(res => res.json())
         .then(result => {
             console.log(result);
+            if(result.insertedId){
+                    toast('New Item Added');
+                }
         })
         
     }
