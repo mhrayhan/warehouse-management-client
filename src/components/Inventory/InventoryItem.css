@@ -1,0 +1,21 @@
+/* CSS for inventory */
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+}
+
+
+/* CSS for inventoryItems */
+.singleItem{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+}
+.image{
+    border-radius: 5px 5px 0 0;
+}
+.manage-btn{
+    margin-left: 50%;
+    transform: translateY(-50%);
+}
