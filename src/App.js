@@ -9,6 +9,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import NotFound from './components/NotFound/NotFound';
+import Blogs from './components/Blogs/Blogs';
+import MyItem from './components/MyItem/MyItem';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -23,7 +27,11 @@ function App() {
         <Route path='/update/:id' element={<UpdateItems></UpdateItems>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/myitem' element={<MyItem></MyItem>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );
