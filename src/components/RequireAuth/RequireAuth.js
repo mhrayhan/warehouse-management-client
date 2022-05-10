@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Bars } from 'react-loader-spinner';
 import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
@@ -9,7 +10,9 @@ const RequireAuth = ({children}) => {
     const location = useLocation();
 
     if(loading){
-        return <Loading></Loading>
+        return <div className='loader'><Bars height="100"
+                    width="100"
+                    color='#00FF1F'></Bars></div>
     }
     if(!user){
             return <Navigate to="/login" state={{ from: location }} replace />;

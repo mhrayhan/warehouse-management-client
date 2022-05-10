@@ -8,7 +8,7 @@ import CustomLink from '../CustomLink/CustomLink';
 import './Header.css'
 
 const Header = () => {
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
 
       const handleSignOut = () => {
@@ -26,18 +26,16 @@ const Header = () => {
         <Nav className="me-auto">
         </Nav>
         <Nav>
-          
-             
-          
             {
               user ? <div className='custom-link'>
+            <CustomLink to='/'>Home</CustomLink>
             <CustomLink to='/manage'>Manage Inventory</CustomLink>
             <CustomLink to='/additem'>Add Item</CustomLink>
             <CustomLink to='/myitem'>My Item</CustomLink>
             <Nav.Link className='text-white' onClick={handleSignOut}>Sign Out</Nav.Link>
             </div>
               :
-              <Nav.Link className='text-white fs-5' eventKey={2} as={Link} to='/login'>Login</Nav.Link>
+              <Nav.Link className='text-white fs-5' eventKey={2} as={Link} to='/login'>Please Login</Nav.Link>
             }
         </Nav>
       </Navbar.Collapse>

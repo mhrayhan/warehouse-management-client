@@ -17,7 +17,7 @@ const UpdateItems = () => {
     const increaseQuantity = (e) => {
         e.preventDefault();
         const newStock = parseInt(e.target.newStockValue.value);
-        if(!newStock) return;
+        if(!newStock) return toast('Please Give Some Quantity');
         console.log(newStock);
         const Quantity = newStock + existQuantity;
         const newQuantity = {...user , quantity: Quantity}
@@ -35,7 +35,7 @@ const UpdateItems = () => {
             console.log(result);
             if(result){
                 e.target.reset();
-                toast('Stock Updated');
+                toast(`${newStock} Unit Added`);
                 }
         })
     }

@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Header from '../Header/Header';
 import axios from 'axios';
+import Footer from '../Footer/Footer';
 
 
 const MyItem = () => {
@@ -32,6 +33,7 @@ const MyItem = () => {
             {
                 userItem.map(item => <div key={item._id}><p>{item.email}</p></div>)
             }
+            <Footer></Footer>
         </div>
     );
 };

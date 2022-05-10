@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './InventoryItem.css'
 
 const InventoryItems = ({item}) => {
-    console.log(item);
+    // console.log(item);
     const { _id, name, img, price, quantity, description} = item;
     const navigate = useNavigate();
     const handleNaviget = id => {

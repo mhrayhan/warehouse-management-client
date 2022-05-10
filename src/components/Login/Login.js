@@ -13,8 +13,7 @@ const Login = () => {
     const [
         signInWithEmailAndPassword,
         user,
-        loading,
-        error,
+        loading
     ] = useSignInWithEmailAndPassword(auth);
     
     const navigate= useNavigate();

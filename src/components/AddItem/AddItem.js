@@ -5,6 +5,7 @@ import './AddItem.css'
 import { toast } from 'react-toastify';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Footer from '../Footer/Footer';
 
 const AddItem = () => {
     const [user] = useAuthState(auth);
@@ -45,6 +46,7 @@ const AddItem = () => {
         <input className='submit-btn' value='Add Item'  type="submit" />
     </form>
     </div>
+<Footer></Footer>
 </div>
     );
 };
