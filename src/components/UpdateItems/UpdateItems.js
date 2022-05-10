@@ -1,5 +1,6 @@
 import React  from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import useUpdateItems from '../../hooks/useUpdateItems';
 import Header from '../Header/Header';
 import './UpdateItems.css'
@@ -31,6 +32,10 @@ const UpdateItems = () => {
         .then(res => res.json())
         .then(result => {
             console.log(result);
+            if(result){
+                e.target.reset();
+                toast('Stock Updated');
+                }
         })
     }
     // Decrease Quantity 1

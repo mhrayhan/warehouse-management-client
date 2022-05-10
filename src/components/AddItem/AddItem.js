@@ -18,7 +18,7 @@ const AddItem = () => {
         })
         .then(res => res.json())
         .then(result => {
-            console.log(result);
+            // console.log(result);
             if(result.insertedId){
                     toast('New Item Added');
                     reset()

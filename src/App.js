@@ -7,6 +7,8 @@ import UpdateItems from './components/UpdateItems/UpdateItems';
 import AddItem from './components/AddItem/AddItem';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path='/additem' element={<AddItem></AddItem>}></Route>
         <Route path='/manage' element={<MangeInventories></MangeInventories>}></Route>
         <Route path='/update/:id' element={<UpdateItems></UpdateItems>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
       <ToastContainer></ToastContainer>
     </div>
