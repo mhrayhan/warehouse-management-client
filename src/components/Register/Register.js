@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import { toast } from 'react-toastify';
 
 const Register = () => {
         const [
@@ -19,9 +20,16 @@ const Register = () => {
             event.preventDefault();
             const email = event.target.email.value;
             const password = event.target.password.value;
+            const confirmpass = event.target.confirPassword.value;
+            if(password !== confirmpass) return toast('Password not match');
             console.log(email, password);
 
             createUserWithEmailAndPassword(email, password);
+            if(createUserWithEmailAndPassword){
+                event.target.reset();
+                toast('Registration Successful')
+            }
+
     }
     return (
         <div>

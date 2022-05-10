@@ -26,5 +26,5 @@
 .addNewItem{
   color: rgb(0, 0, 0);
   -webkit-text-stroke: 1px #F8F8F8;
-  text-shadow: 0px 2px 4px rgb(255, 111, 111);
+  text-shadow: 0px 2px 4px rgb(110, 110, 110);
 }

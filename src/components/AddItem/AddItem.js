@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import Header from '../Header/Header';
 import './AddItem.css'
 import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log(data);
@@ -38,7 +41,7 @@ const AddItem = () => {
         <input className='input-field'  placeholder='Quantity' type="number" {...register("quantity")} />
         <input className='input-field'  placeholder='Supplier' type="text" {...register("supplier")} />
         <input className='input-field'  placeholder='Photo URL' type="text" {...register("img")} />
-        <input className='input-field'  placeholder='Email' type="text" {...register("email")} />
+        <input className='input-field' value={user?.email}  placeholder='Email' type="text" {...register("email")} />
         <input className='submit-btn' value='Add Item'  type="submit" />
     </form>
     </div>

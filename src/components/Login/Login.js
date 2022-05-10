@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import Header from '../Header/Header';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
+import { Bars } from  'react-loader-spinner'
 
 const Login = () => {
     
@@ -21,7 +22,9 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     if(loading){
-        return 
+        return <div className='loader'><Bars height="100"
+                    width="100"
+                    color='#00FF1F'></Bars></div>
     }
 
     if(user){

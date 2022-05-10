@@ -1,0 +1,16 @@
+.custom-link{
+    display: flex;
+    align-items: center;
+}
+.custom-link a{
+    margin-right: 10px;
+    text-decoration: none;
+    padding-bottom: 5px;
+    /* border-bottom: 2px solid; */
+}
+.navbar{
+    background-color: #002156;
+}
+.navbar a{
+    color: #fff;
+}

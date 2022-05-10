@@ -17,6 +17,7 @@ const UpdateItems = () => {
     const increaseQuantity = (e) => {
         e.preventDefault();
         const newStock = parseInt(e.target.newStockValue.value);
+        if(!newStock) return;
         console.log(newStock);
         const Quantity = newStock + existQuantity;
         const newQuantity = {...user , quantity: Quantity}
