@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Bars } from "react-loader-spinner";
 import { useParams } from "react-router-dom";
 
 const useUpdateItems = () =>{
@@ -10,7 +11,9 @@ const useUpdateItems = () =>{
         const url = `https://young-garden-12148.herokuapp.com/items/${id}`;
         fetch(url)
         .then(res => res.json())
-        .then(data => setUser(data))
+        .then(data => {
+            setUser(data)
+        })
     },[id])
 
     return [user, setUser]
