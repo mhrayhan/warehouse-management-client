@@ -11,7 +11,13 @@ const AddItem = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        // console.log(data);
+        if(!data.name) return toast('Please Fillup Name Field')
+        if(!data.description) return toast('Please Fillup Descripiton Field')
+        if(!data.price) return toast('Please Fillup Price Field')
+        if(!data.quantity) return toast('Please Fillup Quantity Field')
+        if(!data.supplier) return toast('Please Fillup Supplier Field')
+        if(!data.img) return toast('Please Give Img Url')
+        console.log(data);
         const url = `https://young-garden-12148.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',

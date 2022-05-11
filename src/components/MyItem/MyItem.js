@@ -36,8 +36,8 @@ const MyItem = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                const remaining = userItem.filter(item => item._id !== id);
-                setUserItem(remaining)
+                const match = userItem.filter(item => item._id !== id);
+                setUserItem(match)
             })
         }
     }
