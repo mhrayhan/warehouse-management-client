@@ -53,7 +53,7 @@ const MyItem = () => {
                     <th>Email</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Delete</th>
+                    <th>Remove</th>
                 </tr>
             </thead>
             <tbody>

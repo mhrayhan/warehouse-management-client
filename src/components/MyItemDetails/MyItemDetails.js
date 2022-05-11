@@ -10,7 +10,7 @@ const MyItemDetails = ({handleDelete, item}) => {
                     <td>{email}</td>
                     <td>{price}</td>
                     <td>{quantity}</td>
-                    <td><button onClick={()=>handleDelete(_id)} className='btn btn-danger'>Delete</button></td>
+                    <td><button onClick={()=>handleDelete(_id)} className='btn btn-danger'>Remove</button></td>
                 </tr>
     );
 };

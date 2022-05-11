@@ -17,5 +17,5 @@
 }
 .manage-btn{
     margin-left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
 }

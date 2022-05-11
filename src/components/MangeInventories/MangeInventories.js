@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useItems from '../../hooks/useItems';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import ManageInventory from './ManageInventory';
+import './ManageInventories.css'
 
 const MangeInventories = () => {
     const [items, setItems] = useItems();
@@ -25,6 +27,7 @@ const MangeInventories = () => {
         <div>
             <Header></Header>
             <h2 className='text-center my-4'>Manage Inventories</h2>
+            <Link to='/additem'><button className='add-new-btn btn btn-info mb-3 text-white '>Add New Item</button></Link>
             <div className='items container'>
                 {
                 items.map(item => <ManageInventory 

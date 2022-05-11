@@ -14,7 +14,7 @@ const Inventory = () => {
             items.slice(0, 6).map(item => <InventoryItems key={item._id} item={item}></InventoryItems>)
         }
         </div>
-        <Link to={'/manage'} className='manage-btn'><button className='btn btn-primary mt-3'>Manage Inventory</button></Link>
+        <Link to={'/manage'} ><button className='manage-btn btn btn-primary mt-3'>Manage Inventory</button></Link>
         </div>
     );
 };

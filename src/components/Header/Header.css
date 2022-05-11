@@ -3,14 +3,21 @@
     align-items: center;
 }
 .custom-link a{
-    margin-right: 20px;
+    margin-right: 5px;
     text-decoration: none;
-    padding-bottom: 5px;
-    /* border-bottom: 2px solid; */
+    padding-bottom: 8px;
 }
 .navbar{
     background-color: #002156;
 }
 .navbar a{
     color: #fff;
+}
+
+@media only screen and (max-width: 667px) {
+    .custom-link{
+    display: block;
+
+}
+    
 }
