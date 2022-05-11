@@ -46,7 +46,7 @@ const MyItem = () => {
         <div>
             <Header></Header>
             <h3 className='text-center my-3'>My Item: {userItem.length}</h3>
-            <Table striped bordered hover>
+            <Table striped bordered hover responsive="sm">
             <thead>
                 <tr>
                     <th>Name</th>

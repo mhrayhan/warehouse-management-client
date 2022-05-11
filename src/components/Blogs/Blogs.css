@@ -1,13 +1,22 @@
 .blogs{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; */
     text-align: left;
     margin: 50px;
 }
 .blogs div{
-    /* border: 1px solid; */
     margin: 40px;
     padding: 20px;
     box-shadow: 1px 1px 10px rgba(40, 40, 40, 0.232);
+    border-radius: 0 20px 0 20px ;
+}
+@media only screen and (max-width: 667px){
+    .blogs{
+    text-align: left;
+    margin: 0px;
+}
+.blogs div{
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgba(40, 40, 40, 0.232);
+    border-radius: 0 20px 0 20px ;
+}
 }

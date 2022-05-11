@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant&family=Courgette&family=Inter:wght@400;500&family=Kaisei+Decol:wght@400;700&family=Kaushan+Script&family=Poppins:wght@400;500;700&family=Racing+Sans+One&family=Righteous&family=Roboto:wght@400;700&family=Squada+One&family=Yeseva+One&display=swap');
 .custom-link{
     display: flex;
     align-items: center;
@@ -13,11 +14,40 @@
 .navbar a{
     color: #fff;
 }
-
-@media only screen and (max-width: 667px) {
-    .custom-link{
-    display: block;
+.user-name{
+    margin: 0 8px;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: rgba(0 0 0 0.05rem);
+}
+.brand-name{
+    font-family: 'Righteous', cursive;
+    font-size: 1.5em;
 
 }
+
+/* All component responsive CSS */
+@media only screen and (max-width: 667px) {
+    .custom-link{
+    /* display: block; */
+    flex-direction: column;
+    }
+    .slider-img{
+        height: 300px;
+    }
+    .items {
+    grid-template-columns: repeat(1, 1fr);
+}
+.add-form {
+    margin: 10px auto;
+    margin-bottom: 100%;
+}
+.user-name{
+    margin: 8px 0;
+}
+
+    
     
 }

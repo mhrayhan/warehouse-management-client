@@ -29,3 +29,9 @@
   -webkit-text-stroke: 1px #F8F8F8;
   text-shadow: 0px 2px 4px rgb(110, 110, 110);
 }
+@media only screen and (max-width: 667px){
+.add-form {
+    margin: 10px auto;
+    margin-bottom: 100px;
+}
+}
