@@ -5,13 +5,13 @@ import img1 from '../../images/sl03.jpg'
 import img3 from '../../images/sl01.jpg'
 
 const Slider = () => {
-    const [index, setIndex] = useState(0);
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
+  const [index, setIndex] = useState(0);
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
-    return (
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+  return (
+    <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="slider-img d-block w-100 "
@@ -36,7 +36,7 @@ const Slider = () => {
 
       </Carousel.Item>
     </Carousel>
-    );
+  );
 };
 
 

@@ -8,6 +8,9 @@
     text-decoration: none;
     padding-bottom: 8px;
 }
+.custom-link a:hover{
+    border-bottom: 1px solid #fff;
+}
 .navbar{
     background-color: #002156;
 }
@@ -26,6 +29,11 @@
     font-family: 'Righteous', cursive;
     font-size: 1.5em;
 
+}
+.signOut{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 /* All component responsive CSS */

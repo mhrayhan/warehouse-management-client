@@ -8,61 +8,60 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { toast } from 'react-toastify';
 
 const Register = () => {
-        const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
-    const handleRagister = event =>{
-            event.preventDefault();
-            const email = event.target.email.value;
-            const password = event.target.password.value;
-            const confirmpass = event.target.confirPassword.value;
-            if(password !== confirmpass) return toast('Password not match');
-            console.log(email, password);
+  const handleRagister = event => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const confirmpass = event.target.confirPassword.value;
+    if (password !== confirmpass) return toast('Password not match');
 
-            createUserWithEmailAndPassword(email, password);
-            if(createUserWithEmailAndPassword){
-                event.target.reset();
-                toast('Registration Successful')
-            }
-
+    createUserWithEmailAndPassword(email, password);
+    if (createUserWithEmailAndPassword) {
+      event.target.reset();
+      toast('Registration Successful')
     }
-    return (
-        <div>
-            <Header></Header>
-            <div className='login-form mt-3 pt-3'>
-            <h2 className='text-center'>Please Register</h2>
-                <Form onSubmit={handleRagister} className='p-3'>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Your Name</Form.Label>
-                <Form.Control type="text" name='name' placeholder="Enter Your Name" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" name='email' placeholder="Enter email" />
-            </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" name='password' placeholder="Password" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control type="password" name='confirPassword' placeholder="Confirm Password" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Register
-            </Button>
-            </Form>
-            <p className='p-3 m-0 pb-0  pt-0'>Already Register? <Link className='text-decoration-none' to='/login'>Please Login</Link></p>
-            <div className='p-3'><SocialLogin></SocialLogin></div>
-            </div>
-        </div>
-    );
+  }
+  return (
+    <div>
+      <Header></Header>
+      <div className='login-form mt-3 pt-3'>
+        <h2 className='text-center'>Please Register</h2>
+        <Form onSubmit={handleRagister} className='p-3'>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Your Name</Form.Label>
+            <Form.Control type="text" required name='name' placeholder="Enter Your Name" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" required name='email' placeholder="Enter email" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" required name='password' placeholder="Password" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Confirm Password</Form.Label>
+            <Form.Control type="password" required name='confirPassword' placeholder="Confirm Password" />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Register
+          </Button>
+        </Form>
+        <p className='p-3 m-0 pb-0  pt-0'>Already Register? <Link className='text-decoration-none' to='/login'>Please Login</Link></p>
+        <div className='p-3'><SocialLogin></SocialLogin></div>
+      </div>
+    </div>
+  );
 };
 
 export default Register;
